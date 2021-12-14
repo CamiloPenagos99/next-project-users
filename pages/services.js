@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavBar from "../componentes/navbar";
 
-const Services = ()=>{
-
-    return <h1>Hello World Service</h1>
-}
+const Services = () => {
+  return (
+    <div>
+      <NavBar></NavBar>
+      <h1>Hello Service</h1>
+    </div>
+  );
+};
 
 export default Services;
