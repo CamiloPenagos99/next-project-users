@@ -1,11 +1,11 @@
 import React from 'react'
-import Navigation from '../../componentes/navigation';
+import NavBar from '../componentes/navbar';
 
 const Index = ()=>{
     
     return (
     <div>
-        <Navigation></Navigation>
+        <NavBar></NavBar>
         <h1>Hello World</h1>
     </div>
     )
