@@ -5,7 +5,7 @@ import Container from "../componentes/container";
 const Index = () => {
   return (
     <div>
-    <Container>
+    <Container name="Home">
       <h1>Home</h1>
     </Container>
     </div>

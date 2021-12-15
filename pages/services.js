@@ -1,11 +1,14 @@
 import React from "react";
-import NavBar from "../componentes/navbar";
+import Container from "../componentes/container";
+
+console.log('Services renderizado')
 
 const Services = () => {
   return (
     <div>
-      <NavBar></NavBar>
-      <h1>Hello Service</h1>
+    <Container name="Service">
+      <h1>Services</h1>
+    </Container>
     </div>
   );
 };
