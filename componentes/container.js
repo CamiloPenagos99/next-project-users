@@ -11,7 +11,7 @@ const Container = (props)=>{
                 <link rel="StyleSheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" type="text/css"  />
             </Head>
             <Navigation/>
-            <div>{props.children}</div>
+            <div className='container p-2'>{props.children}</div>
 
         </div>
     )
