@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Container from "../../componentes/container";
 import fetchI from "isomorphic-fetch";
 import Head from "next/head";
 
@@ -21,24 +22,28 @@ const UserProfile = ({ data }) => {
     );
   return (
     <div>
-      <Head>
-        <title>Profile {id}</title>
-        <link
-          rel="StyleSheet"
-          href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
-          type="text/css"
-        />
-      </Head>
-      <div className="card" style={{ width: "18rem" }}>
-        <img className="card-img-top" src={data.avatar} alt={id} />
-        <div className="card-body">
-          <h5 className="card-title">{data.first_name}</h5>
-          <p className="card-text">
-            {data.last_name}-{data.email}
-          </p>
-          <a className="btn btn-primary">Delete</a>
+      <Container name="Profile">
+        <div>
+          <Head>
+            <title>Profile {id}</title>
+            <link
+              rel="StyleSheet"
+              href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+              type="text/css"
+            />
+          </Head>
+          <div className="card text-center" style={{ width: "18rem" }}>
+            <img className="card-img-top" src={data.avatar} alt={id} />
+            <div className="card-body">
+              <h5 className="card-title">{data.first_name}</h5>
+              <p className="card-text">
+                {data.last_name}-{data.email}
+              </p>
+              <a className="btn btn-primary">Delete</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
