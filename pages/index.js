@@ -11,14 +11,14 @@ const Index = ({json}) => {
     <Container name="Home">
       <h1>Home:</h1>
       <hr></hr>
-      <Users usuarios={json}></Users>
+      <Users usuarios={json.data}></Users>
     </Container>
     </div>
   );
 };
 
 Index.getInitialProps = async (ctx) => {
-  const res = await fetchI('https://jsonplaceholder.typicode.com/users')
+  const res = await fetchI('https://reqres.in/api/users?page=2')
   const json = await res.json()
   const data = JSON.stringify(json)
   return { json }
